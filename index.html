@@ -1,0 +1,2191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit & Priyanka - Wedding Invitation</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="aplogo.png">
+    <link rel="apple-touch-icon" href="aplogo.png">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:site_name" content="Amit & Priyanka's Wedding" />
+    <meta property="og:title" content="Inviting you to Amit and Priyanka's Wedding" />
+    <meta property="og:description" content="Join us in celebrating our special day on November 29-30, 2025 at Gold Finch Hotel, Mumbai" />
+    <meta property="og:image" content="https://amitsehgal29.github.io/apwedding/aplogo.png" />
+    <meta property="og:image:secure_url" content="https://amitsehgal29.github.io/apwedding/aplogo.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Amit & Priyanka Wedding Invitation" />
+    <meta property="og:url" content="https://amitsehgal29.github.io/apwedding/" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Inviting you to Amit and Priyanka's Wedding" />
+    <meta name="twitter:description" content="Join us in celebrating our special day on November 29-30, 2025 at Gold Finch Hotel, Mumbai" />
+    <meta name="twitter:image" content="https://amitsehgal29.github.io/apwedding/aplogo.png" />
+    
+    <!-- WhatsApp Specific -->
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amoresa&family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #FFF9F0;
+            --ivory: #FFFFF0;
+            --gold: #D4AF37;
+            --light-gold: #F5E6D3;
+            --soft-pink: #F0D4D8;
+            --rose: #C97B8E;
+            --charcoal: #3D3D3D;
+            --warm-white: #FDFBF7;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--cream);
+            color: var(--gold);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+
+        .decorative-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+        }
+
+        /* Glitter Sparkle Animation */
+        .glitter {
+            position: fixed;
+            pointer-events: none;
+            z-index: 5;
+            width: 4px;
+            height: 4px;
+        }
+
+        .glitter::before,
+        .glitter::after {
+            content: '';
+            position: absolute;
+            background: var(--gold);
+            animation: sparkle var(--sparkle-duration, 3s) ease-in-out infinite;
+            animation-delay: var(--sparkle-delay, 0s);
+            will-change: opacity;
+        }
+
+        .glitter::before {
+            width: 100%;
+            height: 1px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .glitter::after {
+            width: 1px;
+            height: 100%;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Simplified animation for mobile performance */
+        @media (max-width: 768px) {
+            .glitter::before,
+            .glitter::after {
+                animation-duration: 4s;
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styling */
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3.75rem 1.25rem;
+            position: relative;
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            background: var(--cream);
+            min-height: auto;
+            padding: 1.875rem 1.25rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.875rem;
+            margin-bottom: 1.875rem;
+        }        .welcome-message {
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--rose);
+            margin-bottom: 0;
+            max-width: 700px;
+            line-height: 1.8;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .couple-names {
+            font-size: clamp(3rem, 10vw, 6.5rem);
+            font-family: 'Amoresa', cursive;
+            color: var(--gold);
+            margin: 0;
+            line-height: 1.2;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+        }
+
+        .ampersand {
+            font-family: 'Amoresa', cursive;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            color: var(--rose);
+            display: block;
+            margin: 0;
+        }
+
+        .shehnai-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .shehnai {
+            position: absolute;
+            width: 200px;
+            height: auto;
+            transition: transform 0.1s linear;
+            will-change: transform;
+            opacity: 0;
+            animation: fadeInSVG 1.5s ease-in-out forwards;
+        }
+
+        .shehnai.left {
+            top: 40%;
+            left: 0;
+        }
+
+        .shehnai.right {
+            top: 40%;
+            right: 0;
+            transform: scaleX(-1);
+        }
+
+                .divider {
+
+                    width: 12.5rem;
+
+                    height: 0.125rem;
+
+                    background: var(--gold);
+
+                    margin: 1.875rem auto;
+
+                    opacity: 0.6;
+
+                }
+
+        
+
+                /* Ganesh Section */
+
+                section.ganesh-section {
+                    position: relative;
+                    background: var(--ivory);
+                    min-height: auto;
+                    padding: 3.75rem 0;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1.875rem;
+                    margin-bottom: 0;
+                }
+
+                .top-svg-container {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100%;
+                    background-image: url(top.png);
+                    background-size: cover;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    z-index: 0;
+                    pointer-events: none;
+                    mask-image: linear-gradient(to top, transparent, black 20%, black 90%, transparent);
+                    mask-composite: intersect;
+                    -webkit-mask-composite: source-in;
+                    opacity: 0;
+                    transition: opacity 1.5s ease-in-out;
+                }
+
+                .top-svg-container.loaded {
+                    opacity: 1;
+                }
+
+                .top-svg-container.instant {
+                    opacity: 1;
+                    transition: none;
+                }
+
+                @keyframes fadeInSVG {
+                    to {
+                        opacity: 1;
+                    }
+                }
+
+        
+
+                .ganesh-mantra {
+
+                    font-size: clamp(1rem, 4vw, 1.5rem);
+
+                    font-family: 'Cormorant Garamond', serif;
+
+                    color: var(--rose);
+
+                    margin-bottom: 0;
+
+                    letter-spacing: 0.1em;
+
+                    font-weight: 400;
+
+                    text-align: center;
+                    transform: translateY(-10px);
+
+                }
+
+        
+
+                .ganesh-icon {
+
+                    width: 7.375rem;
+
+                    height: 7.375rem;
+
+                    margin: 0 auto;
+
+                    display: block;
+
+                    background: transparent;
+
+                }
+
+        .ganesh-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: transparent;
+            mix-blend-mode: multiply;
+            opacity: 0;
+        }
+
+        .ganesh-icon img.loaded {
+            animation: fadeInImage 1.2s ease-out forwards;
+        }
+
+        @keyframes fadeInImage {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Formal Invitation Section */
+        .invitation-section {
+            background: var(--ivory);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .invitation-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1.875rem;
+            background: var(--warm-white);
+            border-radius: 1.25rem;
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
+            border: 2px solid var(--light-gold);
+            position: relative;
+            z-index: 10;
+        }
+
+        .invitation-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--gold);
+            margin-bottom: 1.875rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+
+        .invitation-text {
+            font-size: 1.3rem;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--gold);
+            line-height: 2;
+            margin: 1.875rem 0;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .wedding-date {
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--rose);
+            margin: 1.875rem 0;
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            letter-spacing: 0.1em;
+        }
+
+        .venue-name {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-top: 1.875rem;
+            font-family: 'Cormorant Garamond', serif;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* Chandelier decorations */
+        .chandelier-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: visible;
+        }
+
+        .chandelier {
+            position: absolute;
+            top: -60px;
+            bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform-origin: top center;
+            opacity: 0.4;
+        }
+
+        /* String with fade at top */
+        .chandelier::before {
+            content: '';
+            width: 2.5px;
+            background: linear-gradient(to bottom, 
+                transparent 0%, 
+                rgba(212, 175, 55, 0.02) 5%, 
+                rgba(212, 175, 55, 0.05) 10%, 
+                rgba(212, 175, 55, 0.08) 15%,
+                rgba(212, 175, 55, 0.12) 20%, 
+                rgba(212, 175, 55, 0.16) 25%,
+                rgba(212, 175, 55, 0.20) 30%,
+                rgba(212, 175, 55, 0.24) 40%,
+                rgba(212, 175, 55, 0.28) 100%);
+            display: block;
+            flex: 1;
+        }
+
+        .chandelier img {
+            display: block;
+            width: 180px;
+            height: auto;
+            flex-shrink: 0;
+            filter: drop-shadow(0 4px 12px rgba(212, 175, 55, 0.3))
+                    drop-shadow(0 0 20px rgba(255, 223, 100, 0.3))
+                    drop-shadow(0 0 40px rgba(255, 223, 100, 0.2));
+            animation: chandelier-glow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes chandelier-glow {
+            0% {
+                filter: drop-shadow(0 4px 12px rgba(212, 175, 55, 0.3))
+                        drop-shadow(0 0 20px rgba(255, 223, 100, 0.25))
+                        drop-shadow(0 0 40px rgba(255, 223, 100, 0.15));
+            }
+            100% {
+                filter: drop-shadow(0 4px 12px rgba(212, 175, 55, 0.3))
+                        drop-shadow(0 0 20px rgba(255, 223, 100, 0.35))
+                        drop-shadow(0 0 40px rgba(255, 223, 100, 0.25));
+            }
+        }
+
+        /* Left chandelier - shorter */
+        .chandelier.left {
+            left: 3%;
+            animation: chandelier-sway-left 8s ease-in-out infinite;
+        }
+
+        /* Right chandelier - longer */
+        .chandelier.right {
+            right: 3%;
+            left: auto;
+            animation: chandelier-sway-right 10s ease-in-out infinite;
+        }
+
+        /* Subtle pendulum animations */
+        @keyframes chandelier-sway-left {
+            0%, 100% {
+                transform: rotate(-2deg);
+            }
+            50% {
+                transform: rotate(2deg);
+            }
+        }
+
+        @keyframes chandelier-sway-right {
+            0%, 100% {
+                transform: rotate(2deg);
+            }
+            50% {
+                transform: rotate(-2deg);
+            }
+        }
+
+        /* Events Section */
+        .events-section {
+            background: var(--cream);
+            flex-direction: column;
+            min-height: auto;
+            padding: 3.75rem 1.25rem 1.875rem 1.25rem;
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+        
+        /* Extra spacing for Helpful Information section title */
+        .links-section .section-title {
+            margin-bottom: 7.5rem;
+        }
+
+        .events-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.875rem;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .event-card {
+            background: var(--warm-white);
+            padding: 1.875rem;
+            border-radius: 1.25rem;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+            border: 2px solid var(--light-gold);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            z-index: 10;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25);
+        }
+
+        .event-name {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            color: var(--gold);
+            margin-bottom: 1.875rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+
+        .event-details {
+            font-size: 1.2rem;
+            margin: 1.875rem 0;
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .event-details strong {
+            color: var(--rose);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+
+        .dress-code {
+            margin-top: 1.875rem;
+            padding: 1.25rem;
+            background: var(--light-gold);
+            border-radius: 0.9375rem;
+            font-style: italic;
+            color: var(--rose);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            border: 1px solid var(--gold);
+            text-align: center;
+        }
+
+        /* Useful Links Section */
+        .links-section {
+            background: var(--ivory);
+            min-height: auto;
+            padding: 3.75rem 1.25rem 1.875rem 1.25rem;
+        }
+
+        .links-container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .link-card {
+            background: var(--warm-white);
+            padding: 1.875rem 1.875rem 3.125rem 1.875rem;
+            border-radius: 1.25rem;
+            margin-bottom: 5rem;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.12);
+            border: 2px solid var(--light-gold);
+            position: relative;
+            z-index: 10;
+            overflow: visible;
+            min-height: 25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .link-card h3 {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 1.875rem;
+            margin-top: 14rem;
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-weight: 400;
+            position: relative;
+            z-index: 5;
+        }
+
+        .link-card p {
+            margin-bottom: 1.875rem;
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            text-align: center;
+            position: relative;
+            z-index: 5;
+        }
+        
+        /* Only apply top margin to photo upload section */
+        .link-card:has(.polaroid-container) h3 {
+            margin-top: 14rem;
+        }
+        
+        /* Other sections keep normal margin */
+        .link-card:not(:has(.polaroid-container)) h3 {
+            margin-top: 0;
+        }
+
+        /* Reduce padding for form card to give more space to inputs */
+        .link-card:has(.message-form) {
+            padding: 1.875rem 0.25rem 3.125rem 0.25rem !important;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.9375rem 2.5rem;
+            background: transparent;
+            color: var(--gold);
+            text-decoration: none;
+            border-radius: 3.125rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: clamp(0.8rem, 2vw, 1.1rem);
+            font-family: 'Montserrat', sans-serif;
+            border: 2px solid var(--gold);
+            margin: 0 auto;
+            letter-spacing: 0.05em;
+            position: relative;
+            z-index: 5;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: var(--gold);
+            transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn:hover {
+            color: white;
+            border-color: var(--gold);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+            transition: all 0.1s ease;
+        }
+
+        .link-card {
+            text-align: center;
+        }
+
+        /* Message Form */
+        .message-form {
+            background: transparent;
+            padding: 1.875rem 0rem !important;
+            border-radius: 0.9375rem;
+            box-shadow: none;
+            text-align: center;
+            position: relative;
+            z-index: 5;
+        }
+
+        .form-group {
+            margin-bottom: 1.875rem;
+            text-align: center;
+            position: relative;
+            z-index: 5;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.625rem;
+            color: var(--rose);
+            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            text-align: center;
+            letter-spacing: 0.05em;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 90% !important;
+            max-width: 800px !important;
+            min-width: 300px !important;
+            display: block !important;
+            margin: 0 auto !important;
+            padding: 0.9375rem;
+            border: 1px solid var(--light-gold);
+            border-radius: 0.625rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            background: white;
+            text-align: center;
+            box-sizing: border-box !important;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .form-group textarea {
+            min-height: 7.5rem;
+            resize: vertical;
+        }
+
+        /* Form Messages */
+        #form-messages {
+            margin-bottom: 1.25rem;
+            padding: 0.9375rem;
+            border-radius: 0.625rem;
+            display: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            text-align: center;
+            position: relative;
+            z-index: 5;
+        }
+
+        #form-messages.success {
+            display: block;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        #form-messages.error {
+            display: block;
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Floating Letter Cards */
+        .floating-letters-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-letter {
+            position: absolute;
+            background: linear-gradient(135deg, var(--warm-white) 0%, var(--ivory) 100%);
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            border: 1px solid var(--light-gold);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.95rem;
+            color: var(--gold);
+            max-width: 200px;
+            line-height: 1.6;
+            opacity: 0;
+            border-left: 3px solid var(--rose);
+            pointer-events: none;
+            animation-play-state: paused;
+        }
+
+        .floating-letters-container.active .floating-letter {
+            animation-play-state: running;
+        }
+
+
+
+        /* From Left to Right */
+        @keyframes floatFromLeft {
+            0% {
+                transform: translateX(-100%) rotate(-20deg);
+                opacity: 0;
+            }
+            5% {
+                opacity: 0.8;
+            }
+            95% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateX(calc(100vw + 100%)) rotate(20deg);
+                opacity: 0;
+            }
+        }
+
+        /* From Right to Left */
+        @keyframes floatFromRight {
+            0% {
+                transform: translateX(100vw) rotate(20deg);
+                opacity: 0;
+            }
+            5% {
+                opacity: 0.8;
+            }
+            95% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateX(calc(-100% - 100px)) rotate(-20deg);
+                opacity: 0;
+            }
+        }
+
+        /* Assign different animations to each letter - random horizontal movement */
+        .floating-letter:nth-child(1) {
+            top: 12%;
+            animation: floatFromLeft 50s ease-in-out infinite;
+            animation-delay: 0s;
+            transform: rotate(-3deg);
+        }
+
+        .floating-letter:nth-child(2) {
+            top: 35%;
+            animation: floatFromRight 44s ease-in-out infinite;
+            animation-delay: 2s;
+            transform: rotate(2deg);
+        }
+
+        .floating-letter:nth-child(3) {
+            top: 48%;
+            animation: floatFromLeft 56s ease-in-out infinite;
+            animation-delay: 5s;
+            transform: rotate(-1deg);
+        }
+
+        .floating-letter:nth-child(4) {
+            top: 58%;
+            animation: floatFromRight 48s ease-in-out infinite;
+            animation-delay: 8s;
+            transform: rotate(4deg);
+        }
+
+        .floating-letter:nth-child(5) {
+            top: 72%;
+            animation: floatFromLeft 52s ease-in-out infinite;
+            animation-delay: 3s;
+            transform: rotate(-2deg);
+        }
+
+        .floating-letter:nth-child(6) {
+            top: 22%;
+            animation: floatFromRight 46s ease-in-out infinite;
+            animation-delay: 6s;
+            transform: rotate(3deg);
+        }
+
+        .floating-letter:nth-child(7) {
+            top: 53%;
+            animation: floatFromLeft 54s ease-in-out infinite;
+            animation-delay: 1s;
+            transform: rotate(-4deg);
+        }
+
+        .floating-letter:nth-child(8) {
+            top: 68%;
+            animation: floatFromRight 50s ease-in-out infinite;
+            animation-delay: 4s;
+            transform: rotate(1deg);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gold);
+            color: var(--cream);
+            text-align: center;
+            padding: 1.875rem 1.25rem;
+        }
+
+        footer p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+
+
+
+            .invitation-content {
+                padding: 2.5rem 1.875rem;
+            }
+
+            .chandelier.left {
+                left: 5%;
+            }
+
+            .chandelier.right {
+                right: 5%;
+            }
+
+            .chandelier img {
+                width: 140px;
+            }
+
+            .events-container {
+                grid-template-columns: 1fr;
+            }
+
+
+
+            .ganesh-icon {
+                width: 6.25rem;
+                height: 6.25rem;
+            }
+
+            /* Wider form inputs on mobile */
+            .message-form {
+                padding: 1.25rem 0.3rem;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            will-change: opacity, transform;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            will-change: opacity, transform;
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            will-change: opacity, transform;
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            will-change: opacity, transform;
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Faster animations on mobile */
+        @media (max-width: 768px) {
+            .fade-in,
+            .slide-in-left,
+            .slide-in-right,
+            .scale-in {
+                transition-duration: 0.5s;
+            }
+        }
+
+        .stagger-delay-1 {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-delay-2 {
+            transition-delay: 0.4s;
+        }
+
+        .stagger-delay-3 {
+            transition-delay: 0.6s;
+        }
+
+        /* Fireworks Animation */
+        .fireworks-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0;
+            animation: burst 1s ease-out forwards;
+        }
+
+        @keyframes burst {
+            0% {
+                transform: scale(0.5) translate(0, 0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1) translate(var(--x), calc(var(--y) + 50px));
+                opacity: 0;
+            }
+        }
+
+        /* Arch Frame Shape for Cards - Authentic Mughal Style */
+        .arch-shaped {
+            position: relative;
+            border-left: 3px solid var(--gold);
+            border-right: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            border-top: none;
+            background: var(--warm-white);
+            overflow: visible;
+            padding-top: 40px;
+            padding-bottom: 30px;
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        /* Add extra spacing between consecutive arch sections in Helpful Information */
+        .link-card.arch-shaped + .link-card.arch-shaped {
+            margin-top: 160px;
+        }
+
+        /* Exact Mughal Multi-Cusped Arch from Reference */
+        .arch-shaped::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: -3px;
+            right: -3px;
+            height: 80px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3C!-- Mughal arch with multiple scalloped cusps exactly like reference --%3E%3Cpath d='M 0,100 L 0,100 C 0,100 50,100 80,85 C 95,77 105,65 120,58 C 140,48 155,50 175,42 C 195,34 210,25 235,20 C 260,15 280,15 305,12 C 330,9 350,8 375,6 C 400,4 420,3 445,2 C 465,1 480,1 500,0 C 520,1 535,1 555,2 C 580,3 600,4 625,6 C 650,8 670,9 695,12 C 720,15 740,15 765,20 C 790,25 805,34 825,42 C 845,50 860,48 880,58 C 895,65 905,77 920,85 C 950,100 1000,100 1000,100 L 1000,100 L 1003,103 L -3,103 L -3,100 Z' fill='%23FDFBF7' stroke='%23D4AF37' stroke-width='3' stroke-linejoin='miter'/%3E%3C/svg%3E");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            z-index: 1;
+        }
+
+        /* Clip content to arch boundaries for wishes section only */
+        .arch-shaped .floating-letters-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+            clip-path: polygon(
+                0 80px,
+                0 100%,
+                100% 100%,
+                100% 80px,
+                100% 0,
+                0 0
+            );
+        }
+
+        /* Music Control Button */
+        .music-control {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 15px;
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            border-radius: 50%;
+            border: 2px solid var(--rose);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--rose);
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(200, 100, 130, 0.2);
+            transition: all 0.3s ease;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Flower Shower Container for Varmala */
+        .flower-shower-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .flower-shower-container.active {
+            opacity: 1;
+        }
+
+        .flower {
+            position: absolute;
+            font-size: 28px;
+            opacity: 0;
+        }
+
+        /* Flowers from top-left area falling to bottom-center */
+        .flower.from-left {
+            animation: fall-left ease-in infinite;
+        }
+
+        /* Flowers from top-right area falling to bottom-center */
+        .flower.from-right {
+            animation: fall-right ease-in infinite;
+        }
+
+        @keyframes fall-left {
+            0% {
+                top: 10%;
+                left: var(--start-left);
+                opacity: 0;
+                transform: rotate(0deg) scale(0.5);
+            }
+            10% {
+                opacity: 1;
+                transform: rotate(60deg) scale(1);
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                top: 100%;
+                left: var(--end-left);
+                opacity: 0;
+                transform: rotate(var(--rotation)) scale(0.7);
+            }
+        }
+
+        @keyframes fall-right {
+            0% {
+                top: 10%;
+                right: var(--start-right);
+                opacity: 0;
+                transform: rotate(0deg) scale(0.5);
+            }
+            10% {
+                opacity: 1;
+                transform: rotate(-60deg) scale(1);
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                top: 100%;
+                right: var(--end-right);
+                opacity: 0;
+                transform: rotate(var(--rotation)) scale(0.7);
+            }
+        }
+
+        /* Random starting positions and timings for flowers from left */
+        .flower.from-left:nth-child(1) { --start-left: 2%; --end-left: 15%; --rotation: 540deg; animation-duration: 3.5s; animation-delay: 0s; }
+        .flower.from-left:nth-child(3) { --start-left: 8%; --end-left: 65%; --rotation: 620deg; animation-duration: 4.2s; animation-delay: 0.6s; }
+        .flower.from-left:nth-child(5) { --start-left: 5%; --end-left: 40%; --rotation: 480deg; animation-duration: 3.8s; animation-delay: 1.3s; }
+        .flower.from-left:nth-child(7) { --start-left: 12%; --end-left: 85%; --rotation: 700deg; animation-duration: 4.5s; animation-delay: 2.1s; }
+        .flower.from-left:nth-child(9) { --start-left: 3%; --end-left: 30%; --rotation: 560deg; animation-duration: 3.6s; animation-delay: 0.9s; }
+        .flower.from-left:nth-child(11) { --start-left: 10%; --end-left: 55%; --rotation: 640deg; animation-duration: 4.0s; animation-delay: 1.7s; }
+        .flower.from-left:nth-child(13) { --start-left: 6%; --end-left: 75%; --rotation: 520deg; animation-duration: 3.9s; animation-delay: 2.4s; }
+        .flower.from-left:nth-child(15) { --start-left: 9%; --end-left: 20%; --rotation: 580deg; animation-duration: 4.3s; animation-delay: 1.2s; }
+
+        /* Random starting positions and timings for flowers from right */
+        .flower.from-right:nth-child(2) { --start-right: 3%; --end-right: 10%; --rotation: -540deg; animation-duration: 3.7s; animation-delay: 0.3s; }
+        .flower.from-right:nth-child(4) { --start-right: 9%; --end-right: 70%; --rotation: -600deg; animation-duration: 4.1s; animation-delay: 1.0s; }
+        .flower.from-right:nth-child(6) { --start-right: 6%; --end-right: 45%; --rotation: -520deg; animation-duration: 3.9s; animation-delay: 1.8s; }
+        .flower.from-right:nth-child(8) { --start-right: 11%; --end-right: 88%; --rotation: -680deg; animation-duration: 4.4s; animation-delay: 2.5s; }
+        .flower.from-right:nth-child(10) { --start-right: 4%; --end-right: 25%; --rotation: -560deg; animation-duration: 3.8s; animation-delay: 0.7s; }
+        .flower.from-right:nth-child(12) { --start-right: 10%; --end-right: 60%; --rotation: -620deg; animation-duration: 4.2s; animation-delay: 1.5s; }
+        .flower.from-right:nth-child(14) { --start-right: 7%; --end-right: 35%; --rotation: -500deg; animation-duration: 3.6s; animation-delay: 2.2s; }
+        .flower.from-right:nth-child(16) { --start-right: 5%; --end-right: 80%; --rotation: -580deg; animation-duration: 4.0s; animation-delay: 1.1s; }
+
+        .music-control:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(200, 100, 130, 0.4);
+            background: rgba(200, 100, 130, 0.1);
+        }
+
+        .music-control.playing {
+            animation: none;
+        }
+
+        /* Strike-through line for muted state - 60 degree angle */
+        .music-control::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 70%;
+            height: 2px;
+            background: var(--rose);
+            transform: translate(-50%, -50%) rotate(60deg) scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease;
+        }
+
+        .music-control.muted::after {
+            transform: translate(-50%, -50%) rotate(60deg) scaleX(1);
+            animation: strikeThrough 0.3s ease forwards;
+        }
+
+        @keyframes strikeThrough {
+            from {
+                transform: translate(-50%, -50%) rotate(60deg) scaleX(0);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(60deg) scaleX(1);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 4px 15px rgba(200, 100, 130, 0.2);
+                border-color: var(--rose);
+            }
+            50% {
+                box-shadow: 0 4px 25px rgba(200, 100, 130, 0.5);
+                border-color: var(--gold);
+            }
+        }
+
+        /* Polaroid Photos on Rope */
+        .polaroid-container {
+            position: absolute;
+            top: 1.875rem;
+            left: 0;
+            width: 100%;
+            height: 12.5rem;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.6;
+        }
+
+        .rope {
+            position: absolute;
+            top: 20px;
+            left: 5%;
+            width: 90%;
+            height: 2px;
+            background: linear-gradient(to right, 
+                transparent 0%, 
+                #C97B8E 5%, 
+                #C97B8E 95%, 
+                transparent 100%);
+            pointer-events: none;
+            box-shadow: 0 1px 2px rgba(200, 100, 130, 0.3);
+        }
+
+        .polaroid {
+            position: absolute;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            left: 0;
+            transform: translateX(-50%);
+        }
+
+        /* Clip holding the photo */
+        .polaroid::before {
+            content: '';
+            width: 20px;
+            height: 16px;
+            background: linear-gradient(to bottom, #D2691E 0%, #8B4513 100%);
+            clip-path: polygon(
+                25% 0%, 75% 0%,
+                100% 20%, 100% 50%,
+                80% 55%, 80% 100%,
+                20% 100%, 20% 55%,
+                0% 50%, 0% 20%
+            );
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2px;
+            z-index: 10;
+        }
+
+        /* String hanging from rope to clip */
+        .polaroid::after {
+            content: '';
+            width: 1.5px;
+            height: 20px;
+            background: linear-gradient(to bottom, #C97B8E, rgba(201, 123, 142, 0.7));
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .polaroid img {
+            display: block;
+            border: 1.5px solid var(--gold);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            transform-origin: top center;
+        }
+
+        /* Sway animations - now rotates the image inside */
+        @keyframes sway1 {
+            0% { transform: rotate(-4deg); }
+            100% { transform: rotate(2deg); }
+        }
+
+        @keyframes sway2 {
+            0% { transform: rotate(3deg); }
+            100% { transform: rotate(-3deg); }
+        }
+
+        @keyframes sway3 {
+            0% { transform: rotate(-2deg); }
+            100% { transform: rotate(4deg); }
+        }
+
+        @keyframes sway4 {
+            0% { transform: rotate(5deg); }
+            100% { transform: rotate(-1deg); }
+        }
+
+        .polaroid:nth-child(2) {
+            left: 15%;
+        }
+
+        .polaroid:nth-child(2) img {
+            width: 130px;
+            animation: sway1 3.5s ease-in-out infinite alternate;
+        }
+
+        .polaroid:nth-child(3) {
+            left: 38%;
+        }
+
+        .polaroid:nth-child(3) img {
+            width: 130px;
+            animation: sway2 4s ease-in-out infinite alternate;
+        }
+
+        .polaroid:nth-child(4) {
+            left: 62%;
+        }
+
+        .polaroid:nth-child(4) img {
+            width: 130px;
+            animation: sway3 3.8s ease-in-out infinite alternate;
+        }
+
+        .polaroid:nth-child(5) {
+            left: 85%;
+        }
+
+        .polaroid:nth-child(5) img {
+            width: 130px;
+            animation: sway4 4.2s ease-in-out infinite alternate;
+        }
+
+        @media (max-width: 768px) {
+            .polaroid:nth-child(2) img,
+            .polaroid:nth-child(3) img,
+            .polaroid:nth-child(4) img,
+            .polaroid:nth-child(5) img {
+                width: 5.625rem;
+            }
+
+            .polaroid::before {
+                height: 15px;
+            }
+
+            .polaroid-container {
+                height: 11.25rem;
+                top: 1.875rem;
+            }
+
+            .rope {
+                top: 15px;
+            }
+        }
+        /* Route Animation for Venue Location */
+        .route-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .route-container.active {
+            opacity: 1;
+        }
+        
+        /* Airport icon - top left */
+        .airport-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 131px;
+            height: 131px;
+            z-index: 1;
+        }
+        
+        .airport-icon img {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+        }
+        
+        /* Mandap icon - bottom LEFT */
+        .mandap-icon {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 145px;
+            height: 145px;
+            z-index: 1;
+        }
+        
+        .mandap-icon img {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+        }
+        
+        /* Dotted path - C-shaped route from airport to mandap */
+        .route-path {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        .route-path svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Animated taxi - bigger size */
+        .taxi-animated {
+            position: absolute;
+            width: 149px; /* Increased size */
+            height: 149px; /* Increased size */
+            z-index: 2;
+            opacity: 0;
+            offset-rotate: auto; /* Taxi rotates along the path */
+        }
+        
+        .taxi-animated img {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25));
+        }
+        
+        .route-container.active .taxi-animated {
+            animation: taxiRoute 10s linear forwards; /* Run once and hold final state */
+        }
+        
+        @keyframes taxiRoute {
+            0% {
+                offset-distance: 0%;
+                opacity: 0;
+            }
+            2% {
+                opacity: 1;
+            }
+            98% {
+                opacity: 1;
+            }
+            100% {
+                offset-distance: 100%;
+                opacity: 1; /* Stay visible at the end */
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .airport-icon {
+                top: 0.9375rem;
+                left: 0.9375rem;
+                width: 5.75rem;
+                height: 5.75rem;
+            }
+            
+            .mandap-icon {
+                bottom: 0.9375rem;
+                left: 0.9375rem;
+                width: 6.5625rem;
+                height: 6.5625rem;
+            }
+            
+            .taxi-animated {
+                width: 6.5625rem;
+                height: 6.5625rem;
+            }
+
+            #venue-card {
+                min-height: 34.375rem;
+            }
+
+            .btn {
+                padding: 0.75rem 1.5625rem;
+                border-radius: 1.875rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="background-music" loop preload="auto">
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Control Button -->
+    <button id="music-toggle" class="music-control playing" title="Pause Music">
+        ♫
+    </button>
+
+    <!-- Ganesh Section -->
+    <section class="ganesh-section">
+
+        <div class="top-svg-container"></div>
+        
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="shehnai-container">
+            <img src="shehnai.svg" class="shehnai left" alt="Shehnai">
+            <img src="shehnai.svg" class="shehnai right" alt="Shehnai">
+        </div>
+        <div class="ganesh-mantra fade-in">|| श्री गणेशाय नमः ||</div>
+        <div class="ganesh-icon scale-in">
+            <img src="ganpati.png" alt="Shree Ganesh" loading="eager">
+        </div>
+        <div class="couple-names fade-in">
+            Amit
+            <span class="ampersand">& </span>
+            Priyanka
+        </div>
+        <div class="divider scale-in"></div>
+        <div class="welcome-message fade-in">
+            With great joy, we invite you to celebrate the union of two hearts, two families, and a lifetime of love
+        </div>
+        <div class="divider scale-in"></div>
+    </section>
+
+    <!-- Formal Invitation Section -->
+    <section class="invitation-section">
+        <div class="invitation-content fade-in arch-shaped">
+            <!-- Chandelier decorations -->
+            <div class="chandelier-container">
+                <div class="chandelier left">
+                    <img src="chand.png" alt="Chandelier">
+                </div>
+                <div class="chandelier right">
+                    <img src="chand.png" alt="Chandelier">
+                </div>
+            </div>
+            
+            <h2 class="invitation-title">You Are Cordially Invited</h2>
+            <div class="divider"></div>
+            <p class="invitation-text">
+                To witness and bless the sacred union of<br>
+                <strong>Amit & Priyanka</strong><br>
+                as they begin their journey together
+            </p>
+            <div class="wedding-date">
+                29th - 30th November, 2025
+            </div>
+            <p class="venue-name">
+                <strong>Gold Finch Hotel</strong><br>
+                Andheri East, Mumbai
+            </p>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section">
+        <h2 class="section-title fade-in">Celebration Events</h2>
+        <div class="events-container">
+            <!-- Sangeet Card -->
+            <div class="event-card slide-in-left arch-shaped" id="sangeet-card">
+                <div class="fireworks-container"></div>
+                <h3 class="event-name">Sangeet</h3>
+                <div class="divider"></div>
+                <div class="event-details">
+                    <strong>Date</strong>
+                    29th November, 2025
+                </div>
+                <div class="event-details">
+                    <strong>Time</strong>
+                    7:00 PM Onwards
+                </div>
+                <div class="event-details">
+                    <strong>Venue</strong>
+                    Rooftop, Gold Finch Hotel
+                </div>
+                <div class="dress-code">
+                    <strong>Dress Code:</strong> Bling ✨
+                </div>
+            </div>
+
+            <!-- Varmala & Phera Card -->
+            <div class="event-card slide-in-right arch-shaped">
+                <!-- Flower Shower Animation -->
+                <div class="flower-shower-container">
+                    <div class="flower from-left">🌸</div>
+                    <div class="flower from-right">🌺</div>
+                    <div class="flower from-left">🌼</div>
+                    <div class="flower from-right">🌸</div>
+                    <div class="flower from-left">🌺</div>
+                    <div class="flower from-right">🌼</div>
+                    <div class="flower from-left">🌸</div>
+                    <div class="flower from-right">🌺</div>
+                    <div class="flower from-left">🌼</div>
+                    <div class="flower from-right">🌸</div>
+                    <div class="flower from-left">🌺</div>
+                    <div class="flower from-right">🌼</div>
+                    <div class="flower from-left">🌸</div>
+                    <div class="flower from-right">🌺</div>
+                    <div class="flower from-left">🌼</div>
+                    <div class="flower from-right">🌸</div>
+                </div>
+                
+                <h3 class="event-name">Varmala & Phera</h3>
+                <div class="divider"></div>
+                <div class="event-details">
+                    <strong>Date</strong>
+                    30th November, 2025
+                </div>
+                <div class="event-details">
+                    <strong>Time</strong>
+                    11:00 AM Onwards
+                </div>
+                <div class="event-details">
+                    <strong>Venue</strong>
+                    Banquet, Gold Finch Hotel
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Useful Links Section -->
+    <section class="links-section">
+        <div class="links-container">
+            <h2 class="section-title fade-in">Helpful Information</h2>
+            
+            <!-- Google Maps Link -->
+            <div class="link-card fade-in arch-shaped" id="venue-card">
+                <!-- Route Animation Container -->
+                <div class="route-container">
+                    <!-- Airport icon - top left -->
+                    <div class="airport-icon">
+                        <img src="airport.svg" alt="Airport">
+                    </div>
+                    
+                    <!-- Mandap icon - bottom left -->
+                    <div class="mandap-icon">
+                        <img src="mandap.svg" alt="Mandap">
+                    </div>
+                    
+                    <!-- Dotted C-shaped path -->
+                    <div class="route-path">
+                        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                        </svg>
+                    </div>
+                    
+                    <!-- Animated taxi with natural movement -->
+                    <div class="taxi-animated">
+                        <img src="taxi.svg" alt="Taxi">
+                    </div>
+                </div>
+                
+                <div class="venue-text-content">
+                    <h3>📍 Venue Location</h3>
+                    <p>Get directions to Gold Finch Hotel, Andheri East</p>
+                    <a href="https://maps.app.goo.gl/KdNgw9WxxtoHyenq5" target="_blank" class="btn">Open in Google Maps</a>
+                </div>
+            </div>
+
+            <!-- Message Form -->
+            <div class="link-card fade-in arch-shaped">
+                <!-- Floating Letters Background -->
+                <div class="floating-letters-container">
+                    <div class="floating-letter">Congratulations to the beautiful couple! 💑</div>
+                    <div class="floating-letter">Wishing you a lifetime of love and happiness! ❤️</div>
+                    <div class="floating-letter">May your love story be as magical as a fairy tale ✨</div>
+                    <div class="floating-letter">Wishing for happily ever after, Amit and Priyanka! 🌟</div>
+                    <div class="floating-letter">Cheers to love, laughter, and your happily ever after! 🥂</div>
+                    <div class="floating-letter">Best wishes on this wonderful journey! 🎊</div>
+                    <div class="floating-letter">May your marriage be filled with endless joy! 💕</div>
+                    <div class="floating-letter">So happy for you both! Congratulations! 🎉</div>
+                </div>
+                
+                <h3>💌 Leave Your Wishes</h3>
+                <p>Share your blessings and good wishes for the couple</p>
+                <div id="form-messages"></div>
+                <form class="message-form" id="wishes-form" action="https://formspree.io/f/xldognkw" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" required placeholder="Share your heartfelt wishes..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Wishes</button>
+                </form>
+            </div>
+
+            <!-- Photo Upload Link -->
+            <div class="link-card fade-in arch-shaped">
+                <!-- Polaroid Photos on Rope -->
+                <div class="polaroid-container">
+                    <div class="rope"></div>
+                    <div class="polaroid">
+                        <img src="couple1.png" alt="Amit & Priyanka">
+                    </div>
+                    <div class="polaroid">
+                        <img src="couple2.png" alt="Amit & Priyanka">
+                    </div>
+                    <div class="polaroid">
+                        <img src="couple3.png" alt="Amit & Priyanka">
+                    </div>
+                    <div class="polaroid">
+                        <img src="couple4.png" alt="Amit & Priyanka">
+                    </div>
+                </div>
+                
+                <h3>📸 Share Photos</h3>
+                <p>Capture moments and share them with us! Upload your photos from the celebration</p>
+                <a href="https://photos.app.goo.gl/iGJowXZonFgK34eH6" target="_blank" class="btn">Upload Photos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Looking forward to celebrating with you!</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">Amit & Priyanka • November 2025</p>
+    </footer>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smart loading for top.png - show instantly if cached, fade if loading
+            const topSvgContainer = document.querySelector('.top-svg-container');
+            if (topSvgContainer) {
+                const img = new Image();
+                img.src = 'top.png';
+                
+                if (img.complete) {
+                    // Image is already cached, show instantly
+                    topSvgContainer.classList.add('instant');
+                } else {
+                    // Image needs to load, show with fade effect
+                    img.onload = () => {
+                        topSvgContainer.classList.add('loaded');
+                    };
+                    img.onerror = () => {
+                        // Even on error, show the container (background-image might still work)
+                        topSvgContainer.classList.add('loaded');
+                    };
+                }
+            }
+            
+            const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
+            animatedElements.forEach(el => observer.observe(el));
+            
+            // Observer for flower shower and route animation
+            const effectsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const flowers = entry.target.querySelector('.flower-shower-container');
+                        const floatingLetters = entry.target.querySelector('.floating-letters-container');
+                        const routeContainer = entry.target.querySelector('.route-container');
+                        
+                        if (flowers) {
+                            flowers.classList.add('active');
+                        }
+                        if (floatingLetters) {
+                            floatingLetters.classList.add('active');
+                        }
+                        if (routeContainer) {
+                            routeContainer.classList.add('active');
+                            const taxi = routeContainer.querySelector('.taxi-animated');
+                            const containerWidth = routeContainer.offsetWidth;
+                            const containerHeight = routeContainer.offsetHeight;
+
+                            // Define path based on container dimensions
+                            const startX = containerWidth * 0.25;
+                            const startY = containerHeight * 0.25;
+                            const endX = containerWidth * 0.2;
+                            const endY = containerHeight * 0.75;
+                            const controlX1 = containerWidth * 0.8;
+                            const controlY1 = containerHeight * 0.2;
+                            const controlX2 = containerWidth * 0.8;
+                            const controlY2 = containerHeight * 0.8;
+
+                            const path = `M ${startX},${startY} C ${controlX1},${controlY1} ${controlX2},${controlY2} ${endX},${endY}`;
+                            
+                            if (taxi) {
+                                taxi.style.offsetPath = `path('${path}')`;
+                            }
+                        }
+
+                        const sangeetCard = entry.target.closest('#sangeet-card');
+                        if (sangeetCard) {
+                            const fireworksContainer = sangeetCard.querySelector('.fireworks-container');
+                            if (entry.isIntersecting) {
+                                createFireworks(fireworksContainer);
+                            } else {
+                                if (fireworksContainer && fireworksContainer.fireworksInterval) {
+                                    clearInterval(fireworksContainer.fireworksInterval);
+                                    fireworksContainer.dataset.fireworksActive = false;
+                                }
+                            }
+                        }
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe event cards for special effects
+            const eventCards = document.querySelectorAll('.event-card');
+            eventCards.forEach(card => effectsObserver.observe(card));
+            
+            // Observe link cards for floating letters
+            const linkCards = document.querySelectorAll('.link-card');
+            linkCards.forEach(card => effectsObserver.observe(card));
+
+            const shehnaiLeft = document.querySelector('.shehnai.left');
+            const shehnaiRight = document.querySelector('.shehnai.right');
+
+            // Function to update the shehnai animation based on scroll position
+            function updateShehnaiAnimation() {
+                const scrollY = window.scrollY;
+                const animationStart = 0;
+                const animationEnd = 500; // Animate over the first 500px of scroll
+
+                // Calculate progress from 0 to 1
+                let progress = (scrollY - animationStart) / (animationEnd - animationStart);
+                progress = Math.max(0, Math.min(1, progress)); // Clamp between 0 and 1
+
+                // Calculate transform values
+                const translateXLeft = -50 + (progress * 50); // From -50% to 0%
+                const rotateLeft = -45 + (progress * 45); // From -45deg to 0deg
+
+                const translateXRight = 50 - (progress * 50); // From 50% to 0%
+                const rotateRight = 45 - (progress * 45); // From 45deg to 0deg
+
+                shehnaiLeft.style.transform = `translateX(${translateXLeft}%) translateY(-50%) rotate(${rotateLeft}deg)`;
+                shehnaiRight.style.transform = `translateX(${translateXRight}%) translateY(-50%) rotate(${rotateRight}deg) scaleX(-1)`;
+            }
+
+            // Listen for scroll events and update animation using requestAnimationFrame for smoothness
+            window.addEventListener('scroll', () => {
+                requestAnimationFrame(updateShehnaiAnimation);
+            });
+
+            // Call it once on load to set the initial position correctly
+            updateShehnaiAnimation();
+            
+            // Music Control
+            
+            // Music Control
+            const bgMusic = document.getElementById('background-music');
+            const musicToggle = document.getElementById('music-toggle');
+            let musicPlaying = false;
+            let musicStarted = false;
+            
+            // Function to play music
+            function playMusic() {
+                bgMusic.play().then(() => {
+                    musicPlaying = true;
+                    musicStarted = true;
+                    musicToggle.classList.add('playing');
+                    musicToggle.classList.remove('muted');
+                    musicToggle.title = 'Pause Music';
+                }).catch(error => {
+                    musicPlaying = false;
+                    musicToggle.classList.remove('playing');
+                    musicToggle.classList.add('muted');
+                    musicToggle.title = 'Play Music';
+                });
+            }
+            
+            // Function to pause music
+            function pauseMusic() {
+                bgMusic.pause();
+                musicPlaying = false;
+                musicToggle.classList.remove('playing');
+                musicToggle.classList.add('muted');
+                musicToggle.title = 'Play Music';
+            }
+            
+            // Toggle music on button click
+            musicToggle.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent double-triggering
+                if (musicPlaying) {
+                    pauseMusic();
+                } else {
+                    playMusic();
+                }
+            });
+            
+            // Start music on ANY click (first interaction)
+            document.addEventListener('click', function startOnClick() {
+                if (!musicStarted) {
+                    playMusic();
+                }
+            }, { once: true });
+            
+            // Also try on any key press
+            document.addEventListener('keydown', function startOnKey() {
+                if (!musicStarted) {
+                    playMusic();
+                }
+            }, { once: true });
+            
+            // Also try on touchstart for mobile
+            document.addEventListener('touchstart', function startOnTouch() {
+                if (!musicStarted) {
+                    playMusic();
+                }
+            }, { once: true, passive: true });
+            
+            // Set initial state
+            musicToggle.classList.remove('playing');
+            musicToggle.classList.add('muted');
+            musicToggle.title = 'Play Music';
+            
+            // Handle Ganpati image loading animation
+            const ganpatiImg = document.querySelector('.ganesh-icon img');
+            if (ganpatiImg) {
+                if (ganpatiImg.complete) {
+                    // Image already loaded
+                    ganpatiImg.classList.add('loaded');
+                } else {
+                    // Wait for image to load
+                    ganpatiImg.addEventListener('load', function() {
+                        ganpatiImg.classList.add('loaded');
+                    });
+                    // Fallback: add class after 2 seconds even if load event doesn't fire
+                    setTimeout(() => {
+                        if (!ganpatiImg.classList.contains('loaded')) {
+                            ganpatiImg.classList.add('loaded');
+                        }
+                    }, 2000);
+                }
+            }
+            
+            // Create subtle glitter sparkles
+            createGlitter();
+            
+            // Handle form submission
+            const form = document.getElementById('wishes-form');
+            const formMessages = document.getElementById('form-messages');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show loading message immediately
+                formMessages.innerHTML = '✨ Sending your beautiful wishes...';
+                formMessages.className = 'success';
+                formMessages.style.display = 'block';
+                
+                const formData = new FormData(form);
+                
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        formMessages.innerHTML = '✨ Thank you for your beautiful wishes! Your message means the world to us. 💕';
+                        formMessages.className = 'success';
+                        form.reset();
+                    } else {
+                        return response.json().then(data => {
+                            throw new Error(data.error || 'Form submission failed');
+                        });
+                    }
+                })
+                .catch(error => {
+                    formMessages.innerHTML = 'Oops! There was a problem sending your message. Please try again.';
+                    formMessages.className = 'error';
+                });
+            });
+        });
+
+        // Create subtle glitter sparkles in the background
+        function createGlitter() {
+            // Reduce glitter count on mobile for better performance
+            const isMobile = window.innerWidth <= 768;
+            const numberOfGlitters = isMobile ? 30 : 60; // Reduced from 100
+            
+            for (let i = 0; i < numberOfGlitters; i++) {
+                const glitter = document.createElement('div');
+                glitter.className = 'glitter';
+                
+                // Random position across entire page
+                glitter.style.left = Math.random() * 100 + '%';
+                glitter.style.top = Math.random() * 100 + '%';
+                
+                // Varying sizes for sparkle effect (2-6px)
+                const size = 2 + Math.random() * 4;
+                glitter.style.width = size + 'px';
+                glitter.style.height = size + 'px';
+                
+                // Random animation delay for natural sparkle effect
+                glitter.style.animationDelay = Math.random() * 4 + 's';
+                
+                // Random animation duration for variation (2-5s)
+                const duration = 2 + Math.random() * 3;
+                
+                // Use CSS custom properties instead of creating style tags
+                glitter.style.setProperty('--sparkle-duration', duration + 's');
+                glitter.style.setProperty('--sparkle-delay', Math.random() * 4 + 's');
+                
+                document.body.appendChild(glitter);
+            }
+        }
+
+        function createFireworks(container) {
+            if (!container || container.dataset.fireworksActive) return;
+            container.dataset.fireworksActive = true;
+
+            const colors = ['var(--gold)', 'var(--rose)', 'var(--soft-pink)'];
+            
+            const launchFirework = () => {
+                const rocket = document.createElement('div');
+                rocket.style.position = 'absolute';
+                rocket.style.left = `${Math.random() * 80 + 10}%`;
+                rocket.style.bottom = '0';
+                rocket.style.width = '2px';
+                rocket.style.height = '10px';
+                rocket.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                container.appendChild(rocket);
+
+                const height = Math.random() * container.offsetHeight * 0.6 + container.offsetHeight * 0.2;
+                const duration = Math.random() * 500 + 800;
+                rocket.animate([
+                    { transform: `translateY(0)` },
+                    { transform: `translateY(-${height}px)` }
+                ], {
+                    duration: duration,
+                    easing: 'ease-in-out'
+                }).onfinish = () => {
+                    createBurst(rocket.offsetLeft, container.offsetHeight - height, container, colors);
+                    rocket.remove();
+                };
+            };
+
+            const createBurst = (x, y, container, colors) => {
+                const particleCount = Math.random() * 50 + 50;
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.position = 'absolute';
+                    particle.style.left = `${x}px`;
+                    particle.style.top = `${y}px`;
+                    particle.style.width = `${Math.random() * 3 + 1}px`;
+                    particle.style.height = particle.style.width;
+                    particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    
+                    const angle = Math.random() * 360;
+                    const distance = Math.random() * 80 + 20;
+                    const translateX = Math.cos(angle) * distance;
+                    const translateY = Math.sin(angle) * distance;
+
+                    particle.style.setProperty('--x', `${translateX}px`);
+                    particle.style.setProperty('--y', `${translateY}px`);
+
+                    container.appendChild(particle);
+
+                    setTimeout(() => {
+                        particle.remove();
+                    }, 1000);
+                }
+            };
+
+            container.fireworksInterval = setInterval(launchFirework, 400);
+        }
+    </script>
+</body>
+</html>
