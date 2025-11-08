@@ -1055,35 +1055,6 @@
             transition-delay: 0.6s;
         }
 
-        /* Fireworks Animation */
-        .fireworks-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
-        }
-
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0;
-            animation: burst 1s ease-out forwards;
-        }
-
-        @keyframes burst {
-            0% {
-                transform: scale(0.5) translate(0, 0);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(1) translate(var(--x), calc(var(--y) + 50px));
-                opacity: 0;
-            }
-        }
-
         /* Arch Frame Shape for Cards - Authentic Mughal Style */
         .arch-shaped {
             position: relative;
@@ -1665,7 +1636,7 @@
                 as they begin their journey together
             </p>
             <div class="wedding-date">
-                29th - 30th November, 2025
+                30th November, 2025
             </div>
             <p class="venue-name">
                 <strong>Gold Finch Hotel</strong><br>
@@ -1678,28 +1649,6 @@
     <section class="events-section">
         <h2 class="section-title fade-in">Celebration Events</h2>
         <div class="events-container">
-            <!-- Sangeet Card -->
-            <div class="event-card slide-in-left arch-shaped" id="sangeet-card">
-                <div class="fireworks-container"></div>
-                <h3 class="event-name">Sangeet</h3>
-                <div class="divider"></div>
-                <div class="event-details">
-                    <strong>Date</strong>
-                    29th November, 2025
-                </div>
-                <div class="event-details">
-                    <strong>Time</strong>
-                    7:00 PM Onwards
-                </div>
-                <div class="event-details">
-                    <strong>Venue</strong>
-                    Rooftop, Gold Finch Hotel
-                </div>
-                <div class="dress-code">
-                    <strong>Dress Code:</strong> Bling ✨
-                </div>
-            </div>
-
             <!-- Varmala & Phera Card -->
             <div class="event-card slide-in-right arch-shaped">
                 <!-- Flower Shower Animation -->
@@ -1917,19 +1866,6 @@
                                 taxi.style.offsetPath = `path('${path}')`;
                             }
                         }
-
-                        const sangeetCard = entry.target.closest('#sangeet-card');
-                        if (sangeetCard) {
-                            const fireworksContainer = sangeetCard.querySelector('.fireworks-container');
-                            if (entry.isIntersecting) {
-                                createFireworks(fireworksContainer);
-                            } else {
-                                if (fireworksContainer && fireworksContainer.fireworksInterval) {
-                                    clearInterval(fireworksContainer.fireworksInterval);
-                                    fireworksContainer.dataset.fireworksActive = false;
-                                }
-                            }
-                        }
                     }
                 });
             }, observerOptions);
@@ -2136,67 +2072,6 @@
                 
                 document.body.appendChild(glitter);
             }
-        }
-
-        function createFireworks(container) {
-            if (!container || container.dataset.fireworksActive) return;
-            container.dataset.fireworksActive = true;
-
-            const colors = ['var(--gold)', 'var(--rose)', 'var(--soft-pink)'];
-            
-            const launchFirework = () => {
-                const rocket = document.createElement('div');
-                rocket.style.position = 'absolute';
-                rocket.style.left = `${Math.random() * 80 + 10}%`;
-                rocket.style.bottom = '0';
-                rocket.style.width = '2px';
-                rocket.style.height = '10px';
-                rocket.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                container.appendChild(rocket);
-
-                const height = Math.random() * container.offsetHeight * 0.6 + container.offsetHeight * 0.2;
-                const duration = Math.random() * 500 + 800;
-                rocket.animate([
-                    { transform: `translateY(0)` },
-                    { transform: `translateY(-${height}px)` }
-                ], {
-                    duration: duration,
-                    easing: 'ease-in-out'
-                }).onfinish = () => {
-                    createBurst(rocket.offsetLeft, container.offsetHeight - height, container, colors);
-                    rocket.remove();
-                };
-            };
-
-            const createBurst = (x, y, container, colors) => {
-                const particleCount = Math.random() * 50 + 50;
-                for (let i = 0; i < particleCount; i++) {
-                    const particle = document.createElement('div');
-                    particle.className = 'particle';
-                    particle.style.position = 'absolute';
-                    particle.style.left = `${x}px`;
-                    particle.style.top = `${y}px`;
-                    particle.style.width = `${Math.random() * 3 + 1}px`;
-                    particle.style.height = particle.style.width;
-                    particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                    
-                    const angle = Math.random() * 360;
-                    const distance = Math.random() * 80 + 20;
-                    const translateX = Math.cos(angle) * distance;
-                    const translateY = Math.sin(angle) * distance;
-
-                    particle.style.setProperty('--x', `${translateX}px`);
-                    particle.style.setProperty('--y', `${translateY}px`);
-
-                    container.appendChild(particle);
-
-                    setTimeout(() => {
-                        particle.remove();
-                    }, 1000);
-                }
-            };
-
-            container.fireworksInterval = setInterval(launchFirework, 400);
         }
     </script>
 </body>
